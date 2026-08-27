@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Softwares — Maha Cutss</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800;900&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent !important; }
+        body { background-color: #06030c; color: #f1f5f9; font-family: 'Inter', sans-serif; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; }
+        .ambient-glow { position: fixed; width: 550px; height: 550px; background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, rgba(6, 3, 12, 0) 70%); top: -120px; left: 50%; transform: translateX(-50%); pointer-events: none; }
+        
+        .nav-wrapper {
+            position: sticky;
+            top: 14px;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            padding: 0 1rem;
+        }
+
+        .nav {
+            width: 90%;
+            max-width: 520px;
+            background: rgba(20, 10, 38, 0.45);
+            backdrop-filter: blur(28px) saturate(190%);
+            -webkit-backdrop-filter: blur(28px) saturate(190%);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-top: 1px solid rgba(255, 255, 255, 0.28);
+            box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.5), 0 0 25px rgba(139, 92, 246, 0.15);
+            border-radius: 999px;
+            padding: 0.65rem 1.8rem;
+            text-align: center;
+            animation: iosHeaderEntrance 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .brand-link {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            cursor: pointer;
+            user-select: none;
+            transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.25s ease;
+        }
+
+        .brand-link:active {
+            transform: scale(0.91) translateY(2px);
+            filter: drop-shadow(0 0 18px rgba(167, 139, 250, 0.85));
+        }
+
+        .brand-name { font-family: 'Outfit', sans-serif; font-size: 1.55rem; font-weight: 900; background: linear-gradient(135deg, #ffffff 25%, #e2d9fd 60%, #a78bfa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .brand-sub { font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2.2px; color: #c4b5fd; margin-top: 1px; }
+
+        @keyframes iosHeaderEntrance {
+            0% { opacity: 0; transform: translateY(-20px) scale(0.94); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.25rem 4rem; position: relative; z-index: 10; width: 100%; }
+        .btn-back { display: inline-flex; align-items: center; gap: 0.5rem; color: #a78bfa; font-size: 0.85rem; font-weight: 600; background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(167, 139, 250, 0.25); padding: 0.55rem 1.15rem; border-radius: 12px; text-decoration: none; margin-bottom: 1.5rem; }
+        .btn-back:hover { background: rgba(139, 92, 246, 0.25); color: #ffffff; }
+        .page-title { font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; background: linear-gradient(135deg, #ffffff 40%, #c4b5fd 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.25rem; }
+        .page-desc { color: #94a3b8; font-size: 0.95rem; margin-bottom: 2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.25rem; }
+        .card { background: linear-gradient(145deg, rgba(255, 255, 255, 0.04) 0%, rgba(139, 92, 246, 0.02) 100%); border: 1px solid rgba(167, 139, 250, 0.15); border-radius: 18px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; }
+        .icon { width: 48px; height: 48px; border-radius: 14px; background: rgba(139, 92, 246, 0.12); border: 1px solid rgba(167, 139, 250, 0.25); display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.2rem; margin-bottom: 1rem; }
+        .card-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.2rem; font-weight: 800; background: linear-gradient(135deg, #ffffff 40%, #c4b5fd 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.35rem; }
+        .card-desc { color: #94a3b8; font-size: 0.85rem; line-height: 1.5; }
+        .btn-group { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1.5rem; }
+        .btn-dl { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; background: linear-gradient(135deg, #7c3aed, #6d28d9); color: #ffffff; padding: 0.75rem 1.25rem; border-radius: 12px; text-decoration: none; font-size: 0.8rem; font-weight: 700; border: 1px solid rgba(196, 181, 253, 0.3); box-shadow: 0 4px 15px rgba(124, 58, 237, 0.25); }
+        .btn-dl-sec { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; background: rgba(139, 92, 246, 0.12); color: #c4b5fd; padding: 0.7rem 1.25rem; border-radius: 12px; text-decoration: none; font-size: 0.8rem; font-weight: 700; border: 1px solid rgba(167, 139, 250, 0.25); }
+        footer { border-top: 1px solid rgba(167, 139, 250, 0.08); padding: 1.25rem; text-align: center; color: #64748b; font-size: 0.75rem; }
+    </style>
+</head>
+<body>
+    <div class="ambient-glow"></div>
+    <div class="nav-wrapper">
+        <nav class="nav">
+            <a href="index.html" class="brand-link">
+                <h1 class="brand-name">Maha Cutss</h1>
+                <p class="brand-sub">Creator Suite</p>
+            </a>
+        </nav>
+    </div>
+    <div class="container">
+        <a href="index.html" class="btn-back">← Back to Home</a>
+        <h2 class="page-title">Free Softwares</h2>
+        <p class="page-desc">Verified editing suites and creative tool download packages.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <div>
+                    <div class="icon" style="color: #9999ff;">Ae</div>
+                    <h3 class="card-title">Adobe After Effects</h3>
+                    <p class="card-desc">Industry-standard motion graphics, VFX compositing, and visual animation software.</p>
+                </div>
+                <div class="btn-group"><a href="https://filecr.com/windows/adobe-after-effects-0038/?id=115754160000" target="_blank" rel="noopener noreferrer" class="btn-dl">Download for Windows</a></div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="icon" style="color: #ea77ff;">Pr</div>
+                    <h3 class="card-title">Adobe Premiere Pro</h3>
+                    <p class="card-desc">Professional timeline video editing software for cinematic sequences and long-form cuts.</p>
+                </div>
+                <div class="btn-group"><a href="https://filecr.com/macos/adobe-premiere-pro-1051/?id=916711950000" target="_blank" rel="noopener noreferrer" class="btn-dl">Download for Windows</a></div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="icon" style="color: #ff6b6b;">Dv</div>
+                    <h3 class="card-title">DaVinci Resolve Studio</h3>
+                    <p class="card-desc">Hollywood-grade color grading, Fairlight audio mixing, and Fusion visual effects suite.</p>
+                </div>
+                <div class="btn-group"><a href="https://filecr.com/windows/davinci-resolve-0001/?id=607562830000" target="_blank" rel="noopener noreferrer" class="btn-dl">Download for Windows</a></div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="icon" style="color: #38bdf8;">Tz</div>
+                    <h3 class="card-title">Topaz Video AI 7.1.5</h3>
+                    <p class="card-desc">AI-powered 4K upscaling, 60fps frame interpolation, noise reduction, and de-interlacing.</p>
+                </div>
+                <div class="btn-group"><a href="https://mega.nz/file/wB0DCQrS#DA5B45SsOtiEU3pLm3eBplvBxd-RX2h957bSTmZ-_pY" target="_blank" rel="noopener noreferrer" class="btn-dl">Download for Windows</a></div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="icon" style="color: #ffffff;">Cc</div>
+                    <h3 class="card-title">CapCut Pro</h3>
+                    <p class="card-desc">Feature-packed fast video editor with auto captions, 3D smooth zooms, and pre-built transitions.</p>
+                </div>
+                <div class="btn-group">
+                    <a href="https://filecr.com/windows/capcut/" target="_blank" rel="noopener noreferrer" class="btn-dl">Download for Windows</a>
+                    <a href="https://filecr.com/android/capcut-video-editor/" target="_blank" rel="noopener noreferrer" class="btn-dl-sec">Download for Mobile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer><p>© 2026 Maha Cutss. All rights reserved.</p></footer>
+</body>
+</html>

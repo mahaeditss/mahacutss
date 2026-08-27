@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maha Cutss — Creator Suite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800;900&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent !important; }
+        body { background-color: #06030c; color: #f1f5f9; font-family: 'Inter', sans-serif; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; }
+        .ambient-glow { position: fixed; width: 550px; height: 550px; background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, rgba(6, 3, 12, 0) 70%); top: -120px; left: 50%; transform: translateX(-50%); pointer-events: none; }
+        
+        /* iOS-Style Wide Glassy Header */
+        .nav-wrapper {
+            position: sticky;
+            top: 14px;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            padding: 0 1rem;
+        }
+
+        .nav {
+            width: 90%;
+            max-width: 520px;
+            background: rgba(20, 10, 38, 0.45);
+            backdrop-filter: blur(28px) saturate(190%);
+            -webkit-backdrop-filter: blur(28px) saturate(190%);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-top: 1px solid rgba(255, 255, 255, 0.28);
+            box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.5), 0 0 25px rgba(139, 92, 246, 0.15);
+            border-radius: 999px;
+            padding: 0.65rem 1.8rem;
+            text-align: center;
+            animation: iosHeaderEntrance 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .brand-link {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            cursor: pointer;
+            user-select: none;
+            transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.25s ease;
+        }
+
+        /* Touch / Click Animation */
+        .brand-link:active {
+            transform: scale(0.91) translateY(2px);
+            filter: drop-shadow(0 0 18px rgba(167, 139, 250, 0.85));
+        }
+
+        .brand-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.55rem;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #ffffff 25%, #e2d9fd 60%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.1;
+        }
+
+        .brand-sub {
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2.2px;
+            color: #c4b5fd;
+            margin-top: 1px;
+            opacity: 0.9;
+        }
+
+        @keyframes iosHeaderEntrance {
+            0% { opacity: 0; transform: translateY(-20px) scale(0.94); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; position: relative; z-index: 10; width: 100%; }
+        .hero { text-align: center; padding: 2.5rem 0 1.5rem; }
+        .badge { display: inline-block; padding: 0.35rem 0.9rem; border-radius: 100px; background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(167, 139, 250, 0.25); color: #c4b5fd; font-size: 0.75rem; font-weight: 600; margin-bottom: 1rem; }
+        .hero-title { font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; line-height: 1.15; background: linear-gradient(135deg, #ffffff 30%, #ddd6fe 65%, #a78bfa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.75rem; }
+        .hero-desc { color: #94a3b8; font-size: 0.95rem; max-width: 540px; margin: 0 auto; line-height: 1.6; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-top: 1rem; }
+        .card { background: linear-gradient(145deg, rgba(255, 255, 255, 0.04) 0%, rgba(139, 92, 246, 0.02) 100%); border: 1px solid rgba(167, 139, 250, 0.15); border-radius: 18px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; text-decoration: none; color: inherit; transition: all 0.25s ease; }
+        .card:hover { transform: translateY(-4px); border-color: rgba(167, 139, 250, 0.4); box-shadow: 0 15px 30px -10px rgba(124, 58, 237, 0.3); }
+        .card:active { transform: scale(0.98); }
+        .icon { width: 46px; height: 46px; border-radius: 13px; background: rgba(139, 92, 246, 0.12); border: 1px solid rgba(167, 139, 250, 0.25); display: flex; align-items: center; justify-content: center; color: #c4b5fd; margin-bottom: 1.2rem; font-weight: 800; font-size: 1.15rem; }
+        .card-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.15rem; font-weight: 800; background: linear-gradient(135deg, #ffffff 40%, #c4b5fd 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.4rem; }
+        .card-desc { color: #94a3b8; font-size: 0.85rem; line-height: 1.5; }
+        .card-footer { margin-top: 1.5rem; padding-top: 0.85rem; border-top: 1px solid rgba(167, 139, 250, 0.08); display: flex; align-items: center; justify-content: space-between; color: #a78bfa; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        footer { border-top: 1px solid rgba(167, 139, 250, 0.08); padding: 1.25rem; text-align: center; color: #64748b; font-size: 0.75rem; }
+    </style>
+</head>
+<body>
+    <div class="ambient-glow"></div>
+    <div class="nav-wrapper">
+        <nav class="nav">
+            <a href="index.html" class="brand-link">
+                <h1 class="brand-name">Maha Cutss</h1>
+                <p class="brand-sub">Creator Suite</p>
+            </a>
+        </nav>
+    </div>
+    <div class="container">
+        <header class="hero">
+            <span class="badge">High Quality Resources for Video Editors</span>
+            <h2 class="hero-title">Elevate every cut with precision.</h2>
+            <p class="hero-desc">Direct download access to verified softwares, smooth slow-motion frames, plugin packs, and cinematic scenepacks.</p>
+        </header>
+        <div class="grid">
+            <a href="softwares.html" class="card">
+                <div>
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+                    <h3 class="card-title">Free Softwares</h3>
+                    <p class="card-desc">AE, Premiere Pro, DaVinci, Topaz 7.1.5, and CapCut download page.</p>
+                </div>
+                <div class="card-footer"><span>Open Page</span> →</div>
+            </a>
+            <a href="plugins.html" class="card">
+                <div>
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                    <h3 class="card-title">Plugins & Presets</h3>
+                    <p class="card-desc">Sapphire, BCC, motion presets and LUTs page.</p>
+                </div>
+                <div class="card-footer"><span>Open Page</span> →</div>
+            </a>
+            <a href="twixtor.html" class="card">
+                <div>
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+                    <h3 class="card-title">Twixtor Clips</h3>
+                    <p class="card-desc">Smooth 60fps & 120fps slow motion footages page.</p>
+                </div>
+                <div class="card-footer"><span>Open Page</span> →</div>
+            </a>
+            <a href="movies.html" class="card">
+                <div>
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg></div>
+                    <h3 class="card-title">Movie Scenepacks</h3>
+                    <p class="card-desc">4K HDR and 1080p high bitrate cinema clips page.</p>
+                </div>
+                <div class="card-footer"><span>Open Page</span> →</div>
+            </a>
+            <a href="tutorials.html" class="card">
+                <div>
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></div>
+                    <h3 class="card-title">Tutorials</h3>
+                    <p class="card-desc">Editing guides, velocity mapping, and workflows page.</p>
+                </div>
+                <div class="card-footer"><span>Open Page</span> →</div>
+            </a>
+            <a href="info.html" class="card">
+                <div>
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></div>
+                    <h3 class="card-title">Info & Socials</h3>
+                    <p class="card-desc">Official Instagram and YouTube channel launch links.</p>
+                </div>
+                <div class="card-footer"><span>Open Page</span> →</div>
+            </a>
+        </div>
+    </div>
+    <footer><p>© 2026 Maha Cutss. All rights reserved.</p></footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info & Socials — Maha Cutss</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800;900&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent !important; }
+        body { background-color: #06030c; color: #f1f5f9; font-family: 'Inter', sans-serif; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; }
+        .ambient-glow { position: fixed; width: 550px; height: 550px; background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, rgba(6, 3, 12, 0) 70%); top: -120px; left: 50%; transform: translateX(-50%); pointer-events: none; }
+        .nav-wrapper { position: sticky; top: 14px; z-index: 100; display: flex; justify-content: center; padding: 0 1rem; }
+        .nav { width: 90%; max-width: 520px; background: rgba(20, 10, 38, 0.45); backdrop-filter: blur(28px) saturate(190%); -webkit-backdrop-filter: blur(28px) saturate(190%); border: 1px solid rgba(255, 255, 255, 0.15); border-top: 1px solid rgba(255, 255, 255, 0.28); box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.5), 0 0 25px rgba(139, 92, 246, 0.15); border-radius: 999px; padding: 0.65rem 1.8rem; text-align: center; animation: iosHeaderEntrance 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .brand-link { display: inline-flex; flex-direction: column; align-items: center; text-decoration: none; cursor: pointer; user-select: none; transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.25s ease; }
+        .brand-link:active { transform: scale(0.91) translateY(2px); filter: drop-shadow(0 0 18px rgba(167, 139, 250, 0.85)); }
+        .brand-name { font-family: 'Outfit', sans-serif; font-size: 1.55rem; font-weight: 900; background: linear-gradient(135deg, #ffffff 25%, #e2d9fd 60%, #a78bfa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .brand-sub { font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2.2px; color: #c4b5fd; margin-top: 1px; }
+        @keyframes iosHeaderEntrance { 0% { opacity: 0; transform: translateY(-20px) scale(0.94); } 100% { opacity: 1; transform: translateY(0) scale(1); } }
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.25rem 4rem; position: relative; z-index: 10; width: 100%; }
+        .btn-back { display: inline-flex; align-items: center; gap: 0.5rem; color: #a78bfa; font-size: 0.85rem; font-weight: 600; background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(167, 139, 250, 0.25); padding: 0.55rem 1.15rem; border-radius: 12px; text-decoration: none; margin-bottom: 1.5rem; }
+        .page-title { font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 900; background: linear-gradient(135deg, #ffffff 40%, #c4b5fd 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.25rem; }
+        .page-desc { color: #94a3b8; font-size: 0.95rem; margin-bottom: 2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.25rem; }
+        .card { background: linear-gradient(145deg, rgba(255, 255, 255, 0.04) 0%, rgba(139, 92, 246, 0.02) 100%); border: 1px solid rgba(167, 139, 250, 0.15); border-radius: 18px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; }
+        .icon { width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+        .card-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.2rem; font-weight: 800; background: linear-gradient(135deg, #ffffff 40%, #c4b5fd 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.35rem; }
+        .card-desc { color: #94a3b8; font-size: 0.85rem; line-height: 1.5; }
+        .btn-social { display: inline-flex; align-items: center; justify-content: center; color: #ffffff; padding: 0.75rem 1.25rem; border-radius: 12px; text-decoration: none; font-size: 0.8rem; font-weight: 700; margin-top: 1.5rem; }
+        footer { border-top: 1px solid rgba(167, 139, 250, 0.08); padding: 1.25rem; text-align: center; color: #64748b; font-size: 0.75rem; }
+    </style>
+</head>
+<body>
+    <div class="ambient-glow"></div>
+    <div class="nav-wrapper">
+        <nav class="nav">
+            <a href="index.html" class="brand-link">
+                <h1 class="brand-name">Maha Cutss</h1>
+                <p class="brand-sub">Creator Suite</p>
+            </a>
+        </nav>
+    </div>
+    <div class="container">
+        <a href="index.html" class="btn-back">← Back to Home</a>
+        <h2 class="page-title">Info & Social Channels</h2>
+        <p class="page-desc">Connect directly on official Maha Cutss handles.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <div>
+                    <div class="icon" style="color: #f472b6; background: rgba(225, 48, 108, 0.15); border: 1px solid rgba(225, 48, 108, 0.4);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </div>
+                    <h3 class="card-title">@maha__editss</h3>
+                    <p class="card-desc">Daily project edits, short tutorials, presets previews, and DM support.</p>
+                </div>
+                <a href="https://www.instagram.com/maha__editss?igsh=MXkybjZ1NXhuOWY3NA==" target="_blank" rel="noopener noreferrer" class="btn-social" style="background: linear-gradient(135deg, #e1306c, #833ab4);">
+                    Open Instagram
+                </a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="icon" style="color: #f87171; background: rgba(255, 0, 0, 0.15); border: 1px solid rgba(255, 0, 0, 0.4);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                    </div>
+                    <h3 class="card-title">Mahaeditss Tutorials</h3>
+                    <p class="card-desc">Detailed editing guides, velocity mapping, and tutorial breakdowns.</p>
+                </div>
+                <a href="https://www.youtube.com/@Mahaeditss_Tutorials_on_edits" target="_blank" rel="noopener noreferrer" class="btn-social" style="background: linear-gradient(135deg, #dc2626, #991b1b);">
+                    Open YouTube
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer><p>© 2026 Maha Cutss. All rights reserved.</p></footer>
+</body>
+</html>
